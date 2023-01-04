@@ -1,0 +1,24 @@
+.cy_link_web{
+	position:fixed;
+	width:auto;
+	bottom:315px;
+	padding: 3px 10px 3px 10px;
+	background-color: rgb(57, 57, 201);
+	rotate:-90deg;
+	left: -50px;
+}
+
+.cy_link_web:hover{
+	opacity:0.7;
+	text-decoration: none;
+}
+
+.center {
+	text-align: center;
+	width: 92%;
+}
+
+.fa-comments-o {
+	rotate: -90deg;
+    color:rgb(255, 255, 255);
+}

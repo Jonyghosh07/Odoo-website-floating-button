@@ -1,0 +1,7 @@
+<odoo>
+    <template id="assets_custom_icon" name="Website Floating" inherit_id="web.assets_frontend">
+        <xpath expr="." position="inside">
+            <link rel="stylesheet" type="text/css" href="meta_custom_icon/static/src/css/custom_icon.css"/>
+        </xpath>
+    </template>
+</odoo>

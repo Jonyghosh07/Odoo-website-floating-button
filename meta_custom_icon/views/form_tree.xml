@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="custom_website_form_view" model="ir.ui.view">
+        <field name="name">custom.website.form.inherit</field>
+        <field name="model">custom.website</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name='name'/>
+                        <field name='red_link'/>
+                        <field name='red_icon'/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="custom_website_tree_view" model="ir.ui.view">
+        <field name="name">custom.website.tree.inherit</field>
+        <field name="model">custom.website</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name='name'/>
+                <field name='red_link'/>
+                <field name='red_icon'/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_website_redirect_link" model="ir.actions.act_window">
+        <field name="name">Website Redirect Link</field>
+        <field name="res_model">custom.website</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="custom_website_tree_view"/>
+    </record>
+
+    <menuitem id="custom_website_link_id"
+                name="Website Link"
+                action='action_website_redirect_link'
+                parent="website.menu_website_global_configuration"
+                sequence='1'/>
+</odoo>
